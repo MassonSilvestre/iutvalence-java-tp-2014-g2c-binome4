@@ -37,6 +37,8 @@ public class ihmPuissance4 extends JFrame implements Runnable {
 	@Override
 	public void run() {
 		
+		
+		
 		this.fenetre = new JFrame();
 		new Menu(fenetre);
 		this.fenetre.setTitle("Puissance 4");
@@ -76,18 +78,23 @@ public class ihmPuissance4 extends JFrame implements Runnable {
 		splitInferieur.setDividerSize(0);
 		splitInferieur.setResizeWeight(0.1);
 		
+		JButton [] boutonColonne  = new JButton [8];
+		
 		colonne.setLayout(( new GridLayout(1, 7)));
 		for (int i = 1; i < 8; i++) {
-				Bouton bouton = new Bouton();
-				colonne.add(bouton);
+			boutonColonne [i] = new BoutonSelection(i);
+				colonne.add(boutonColonne [i]);
 			};
 		
+		JButton [][] boutonGrille  = new JButton [8][7];
+			
 		grille.setLayout(( new GridLayout(6, 7)));
 		for (int i = 0; i < 7; i++) {
 			for (int j = 0; j < 6; j++) {
-				Bouton bouton = new Bouton();
-				bouton.setBackground(Color.RED);
-				grille.add(bouton);
+				boutonGrille [i][j] = new BoutonSelection();
+				
+				grille.add(boutonGrille [i][j]);
+
 			}
 		};
 		
