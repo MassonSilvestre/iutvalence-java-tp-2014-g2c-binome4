@@ -2,6 +2,10 @@ package tp.java.puissance4.binome4;
 
 import java.util.Scanner;
 
+import javax.swing.SwingUtilities;
+
+
+
 /**
  * Class Application
  *
@@ -10,6 +14,7 @@ import java.util.Scanner;
  */
 public class Application {
 	public static void main(String[] args) {
+		SwingUtilities.invokeLater(new ihmPuissance4());
 		@SuppressWarnings("resource")
 		Scanner scanner = new Scanner(System.in);
 		// Saisie du joueur 1 --> couleur Jaune

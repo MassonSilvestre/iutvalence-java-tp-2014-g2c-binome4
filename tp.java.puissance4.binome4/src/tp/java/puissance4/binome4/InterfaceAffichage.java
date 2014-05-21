@@ -49,7 +49,7 @@ public class InterfaceAffichage {
 		// On va ici saisir la colonne souhait√©e par le joueur et on va verifier
 		// sa validit√©.
 		System.out
-				.printf("Joueur %s, entrez le num√©ro de colonne souhait√© (entre 1 et %d) : %n",
+				.printf("Joueur %s, entrez le numÈro de colonne souhaitÈ (entre 1 et %d) : %n",
 						nom, plateau.getTailleColonne());
 		@SuppressWarnings("resource")
 		Scanner scanner = new Scanner(System.in);
@@ -63,7 +63,7 @@ public class InterfaceAffichage {
 				System.out.println("Le coup est non valide !");
 			}
 		} catch (InputMismatchException e) {
-			System.out.println("entrez une valeur num√©rique entre 1 et 7");
+			System.out.println("entrez une valeur numÈrique entre 1 et 7");
 			coupValide = false;
 		}
 	}
