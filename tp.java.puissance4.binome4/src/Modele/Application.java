@@ -1,8 +1,11 @@
-package tp.java.puissance4.binome4;
+package Modele;
 
 import java.util.Scanner;
 
 import javax.swing.SwingUtilities;
+
+import Controller.Controleur;
+import Ihm.ihmPuissance4;
 
 
 
@@ -15,6 +18,8 @@ import javax.swing.SwingUtilities;
 public class Application {
 	public static void main(String[] args) {
 		SwingUtilities.invokeLater(new ihmPuissance4());
+		//SwingUtilities.invokeLater(new demarrerJeu());
+		
 		@SuppressWarnings("resource")
 		Scanner scanner = new Scanner(System.in);
 		// Saisie du joueur 1 --> couleur Jaune
