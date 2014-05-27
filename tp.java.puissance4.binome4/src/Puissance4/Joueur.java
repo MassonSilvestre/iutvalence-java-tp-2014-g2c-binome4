@@ -1,4 +1,4 @@
-package Modele;
+package Puissance4;
 
 /**
  * Class Joueur

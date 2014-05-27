@@ -1,11 +1,8 @@
-package Modele;
+package Puissance4;
 
 import java.util.Scanner;
 
 import javax.swing.SwingUtilities;
-
-import Controller.Controleur;
-import Ihm.ihmPuissance4;
 
 
 
@@ -17,7 +14,8 @@ import Ihm.ihmPuissance4;
  */
 public class Application {
 	public static void main(String[] args) {
-		SwingUtilities.invokeLater(new ihmPuissance4());
+		Fenetre mainGUI = new Fenetre(new Plateau());
+		SwingUtilities.invokeLater(mainGUI);
 		//SwingUtilities.invokeLater(new demarrerJeu());
 		
 		@SuppressWarnings("resource")

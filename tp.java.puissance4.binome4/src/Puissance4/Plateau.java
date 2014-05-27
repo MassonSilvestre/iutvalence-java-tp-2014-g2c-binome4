@@ -1,4 +1,4 @@
-package Modele;
+package Puissance4;
 
 /**
  * Class Plateau
@@ -211,5 +211,10 @@ public class Plateau {
 	public Pion getCase(int ligne, int colonne) {
 		return this.plateau[colonne][ligne];
 	}
+
+	public Pion[][] getPlateau() {
+		return this.plateau;
+	}
+
 
 }

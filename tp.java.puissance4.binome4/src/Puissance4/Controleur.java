@@ -1,9 +1,5 @@
-package Controller;
+package Puissance4;
 
-import Modele.InterfaceAffichage;
-import Modele.Joueur;
-import Modele.Pion;
-import Modele.Plateau;
 
 
 /**

@@ -1,4 +1,4 @@
-package Ihm;
+package Puissance4;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
