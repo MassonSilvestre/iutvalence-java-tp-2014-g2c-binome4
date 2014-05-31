@@ -21,6 +21,7 @@ public class Fenetre extends JFrame implements Runnable, ActionListener {
 	private Pion couleurCourante;
 	private Plateau plateau;
 	private affichageTableau grille;
+	private JLabel nomJoueur;
 	JButton [] boutonColonne;
 	
 	public Fenetre(Plateau plateau) {
@@ -47,7 +48,7 @@ public void run() {
 		JPanel colonne = new JPanel();
 		JPanel joueurCourant = new JPanel() ;
 		JLabel texte = new JLabel("Le joueur courant est : ");
-		JLabel nomJoueur = new JLabel("Robert ");		
+		nomJoueur = new JLabel("Joueur jaune");		
 		
 		joueurCourant.setLayout(( new GridLayout(1, 2)));
 		joueurCourant.add(texte);
@@ -71,7 +72,8 @@ public void run() {
 		
 		colonne.setLayout(( new GridLayout(1, 7)));
 		for (int i = 0; i < 7; i++) {
-			boutonColonne [i] = new JButton();
+			int y = i + 1;
+			boutonColonne [i] = new JButton(""+y);
 			colonne.add(boutonColonne [i]);
 			boutonColonne[i].addActionListener(this);
 			};
@@ -94,8 +96,14 @@ public void run() {
 		int colonneSelectionner = 0;
 		String colorString = "";
 		
-		if(this.couleurCourante.valeur()==Pion.PION_JAUNE.valeur()) colorString = "Joueur Jaune";
-		if(this.couleurCourante.valeur()==Pion.PION_ROUGE.valeur()) colorString = "Joueur Rouge";
+		if(this.couleurCourante.valeur()==Pion.PION_JAUNE.valeur()) {
+			colorString = "Joueur Jaune";
+			this.nomJoueur.setText("Joueur rouge");
+			}
+		if(this.couleurCourante.valeur()==Pion.PION_ROUGE.valeur()) {
+			colorString = "Joueur Rouge";
+			this.nomJoueur.setText("Joueur jaune");
+		}
 		if(selectedItem == this.boutonColonne[0]) colonneSelectionner = 0;
 		if(selectedItem == this.boutonColonne[1]) colonneSelectionner = 1;
 		if(selectedItem == this.boutonColonne[2]) colonneSelectionner = 2;
